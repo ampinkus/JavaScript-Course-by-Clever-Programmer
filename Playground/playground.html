@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=script, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let food = 0;
+        let tipPercent = 0;
+
+        food = Number(prompt('Price of the food?')); // the input is a string so we need to convert it to a number
+        tipPercent = Number(prompt('Tip percent?'));
+        tipAmount = food * tipPercent / 100;
+        total = food + tipAmount;
+        console.log('Tip Amount: ' ,tipAmount);
+        console.log('Total: ', total);
+    </script>
+</body>
+
+</html>
