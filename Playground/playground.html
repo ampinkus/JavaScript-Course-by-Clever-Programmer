@@ -10,15 +10,88 @@
 
 <body>
     <script>
-        let food = 0;
-        let tipPercent = 0;
 
-        food = Number(prompt('Price of the food?')); // the input is a string so we need to convert it to a number
-        tipPercent = Number(prompt('Tip percent?'));
-        tipAmount = food * tipPercent / 100;
-        total = food + tipAmount;
-        console.log('Tip Amount: ' ,tipAmount);
-        console.log('Total: ', total);
+        //var, let, const
+        //don't use var 
+
+        /*
+                let food = 0;
+                let tipPercent = 0;
+        
+                food = Number(prompt('Price of the food?')); // the input is a string so we need to convert it to a number
+                tipPercent = Number(prompt('Tip percent?'));
+                tipAmount = food * tipPercent / 100;
+                total = food + tipAmount;
+                console.log('Tip Amount: ', tipAmount);
+                console.log('Total: ', total);
+        */
+
+        /* math methods
+        console.log(Math.floor(1.25));
+        console.log(Math.ceil(1.25));
+        console.log(Math.floor(Math.random() * 3)); /* get a number between 0 and 2
+
+        */
+
+        /*
+        Baby weather app
+        if conditional
+        if rain -> grab your umbrella
+        if sun -> grab your sunglasses
+        
+       let weather = 'sun'
+       if (weather == 'rain') {
+        console.log('Grab your umbrella')
+       }
+       else{
+        console.log('Grab your sunglasses')
+       }
+       */
+
+        /* functions */
+        /*  function callMyName(name){
+          console.log(name);
+         } */
+
+        // callMyName('Fredi');
+
+
+
+        /* 
+        function greeting(name) { // takes a name and greets
+            console.log(`Hi ${name}, nice to met you!`); // ${string} is called string interpolation
+        }
+        greeting('Fredi');
+
+        function isDivisor(number, divisor) { // tells if one number divides another
+            if (number % divisor == 0) {
+                return 'Is divisor';
+            }
+            else {
+                return 'Not divisor'
+            }
+        }
+        console.log(isDivisor(10, 2)); 
+        */
+
+        function tipCalculator(food,tip) { //given a food amount and a tip calculate the total to pay
+            tipAmount = food * tip / 100;
+            total = food + tipAmount;
+            return total;
+        }
+        console.log('Total to pay: ' +  tipCalculator(100,10));
+
+
+        //arrow function
+        let tipArrow = (food,tip) => { //given a food amount and a tip calculate the total to pay
+            tipAmount = food * tip / 100;
+            total = food + tipAmount;
+            return total;
+        }
+
+        console.log(tipArrow(100,10));
+ 
+
     </script>
 </body>
 
