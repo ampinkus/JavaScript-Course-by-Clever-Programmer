@@ -1,98 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=script, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=script, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
+      //var, let, const
+      //don't use var
 
-        //var, let, const
-        //don't use var 
+      /*
+                  let food = 0;
+                  let tipPercent = 0;
 
-        /*
-                let food = 0;
-                let tipPercent = 0;
-        
-                food = Number(prompt('Price of the food?')); // the input is a string so we need to convert it to a number
-                tipPercent = Number(prompt('Tip percent?'));
-                tipAmount = food * tipPercent / 100;
-                total = food + tipAmount;
-                console.log('Tip Amount: ', tipAmount);
-                console.log('Total: ', total);
-        */
+                  food = Number(prompt('Price of the food?')); // the input is a string so we need to convert it to a number
+                  tipPercent = Number(prompt('Tip percent?'));
+                  tipAmount = food * tipPercent / 100;
+                  total = food + tipAmount;
+                  console.log('Tip Amount: ', tipAmount);
+                  console.log('Total: ', total);
+          */
 
-        /* math methods
-        console.log(Math.floor(1.25));
-        console.log(Math.ceil(1.25));
-        console.log(Math.floor(Math.random() * 3)); /* get a number between 0 and 2
+      /* math methods
+          console.log(Math.floor(1.25));
+          console.log(Math.ceil(1.25));
+          console.log(Math.floor(Math.random() * 3)); /* get a number between 0 and 2
 
-        */
+          */
 
-        /*
-        Baby weather app
-        if conditional
-        if rain -> grab your umbrella
-        if sun -> grab your sunglasses
-        
-       let weather = 'sun'
-       if (weather == 'rain') {
-        console.log('Grab your umbrella')
-       }
-       else{
-        console.log('Grab your sunglasses')
-       }
-       */
+      /*
+          Baby weather app
+          if conditional
+          if rain -> grab your umbrella
+          if sun -> grab your sunglasses
 
-        /* functions */
-        /*  function callMyName(name){
-          console.log(name);
-         } */
+         let weather = 'sun'
+         if (weather == 'rain') {
+          console.log('Grab your umbrella')
+         }
+         else{
+          console.log('Grab your sunglasses')
+         }
+         */
 
-        // callMyName('Fredi');
+      /* functions */
+      /*  function callMyName(name){
+            console.log(name);
+           } */
 
+      // callMyName('Fredi');
 
+      /*
+          function greeting(name) { // takes a name and greets
+              console.log(`Hi ${name}, nice to met you!`); // ${string} is called string interpolation
+          }
+          greeting('Fredi');
 
-        /* 
-        function greeting(name) { // takes a name and greets
-            console.log(`Hi ${name}, nice to met you!`); // ${string} is called string interpolation
-        }
-        greeting('Fredi');
+          function isDivisor(number, divisor) { // tells if one number divides another
+              if (number % divisor == 0) {
+                  return 'Is divisor';
+              }
+              else {
+                  return 'Not divisor'
+              }
+          }
+          console.log(isDivisor(10, 2));
+          */
 
-        function isDivisor(number, divisor) { // tells if one number divides another
-            if (number % divisor == 0) {
-                return 'Is divisor';
-            }
-            else {
-                return 'Not divisor'
-            }
-        }
-        console.log(isDivisor(10, 2)); 
-        */
+      // function tipCalculator(food,tip) { //given a food amount and a tip calculate the total to pay
+      //     tipAmount = food * tip / 100;
+      //     total = food + tipAmount;
+      //     return total;
+      // }
+      // console.log('Total to pay: ' +  tipCalculator(100,10));
 
-        function tipCalculator(food,tip) { //given a food amount and a tip calculate the total to pay
-            tipAmount = food * tip / 100;
-            total = food + tipAmount;
-            return total;
-        }
-        console.log('Total to pay: ' +  tipCalculator(100,10));
+      //arrow function
+      // with implicit return
+      // let let nameFunction = (arguments) => Function definition
+      // let sumArrow = (a,b) => a + b;
+      // console.log(sumArrow(5,10));
 
+      //with explicit return
+      // let nameFunction = (arguments) => { Function definition }
+      // let tipArrow = (food,tip) => { //given a food amount and a tip calculate the total to pay
+      //     tipAmount = food * tip / 100;
+      //     total = food + tipAmount;
+      //     return total;
+      // }
 
-        //arrow function
-        let tipArrow = (food,tip) => { //given a food amount and a tip calculate the total to pay
-            tipAmount = food * tip / 100;
-            total = food + tipAmount;
-            return total;
-        }
+      // console.log(tipArrow(100,10));
 
-        console.log(tipArrow(100,10));
- 
+      //Arrays
+      //   const groceries = ["Banana", "Apple", "Orange", "pear"];
+      //   // console.log(groceries);
+      //   groceries.push("tangerine"); // add an element at the end
+      //   console.log(groceries);
+      //   console.log(groceries.slice(0,2)); //slice: start at element 0 and up to 2nd element
+      //   console.log(groceries.slice(1,3)); //slice: start at element 1 and up to 3rd element
+      //   console.log(groceries.slice(1,4)); //slice: start at element 1 and up to 4rd element
+      //   //array methods (slice, push, index of , lenght )
+      //   console.log(groceries.indexOf('Orange'));
+      //   console.log(groceries.length);
 
+      //Objects
+      // key : value pair
+      // const person = {
+      //   name: "Leonardo",
+      //   shirt: "white",
+      // };
+
+      // console.log(person);
+      // console.log(person.name);
+      // console.log(person.shirt);
+
+      // //assign attribute
+      // person.phone = '6560035'
+      // console.log(person);
+
+      const introducer = (name, shirt) => {
+        const person = {
+          name: name,
+          shirt: shirt,
+          assets: 100000,
+          debt: 50000,
+          netWorth: function () {
+            return this.assets - this.debt;
+          }, // we can assign a function to an attribute, we create a method
+        };
+        const intro = `Hi, mi name is ${
+          person.name
+          // put the () after netWorth to invoke the function
+        } and the color of my shirt is ${person.shirt} and my net worth is $${person.netWorth()}.`; 
+        return intro;
+      };
+
+      console.log(introducer("Fredi", "blue"));
     </script>
-</body>
-
+  </body>
 </html>
