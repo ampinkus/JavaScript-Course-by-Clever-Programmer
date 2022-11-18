@@ -120,24 +120,130 @@
       // person.phone = '6560035'
       // console.log(person);
 
-      const introducer = (name, shirt) => {
-        const person = {
+      /* const introducer = (name, shirt) => {
+        const person = { // creamos una clase person dentro de la función
           name: name,
           shirt: shirt,
           assets: 100000,
           debt: 50000,
-          netWorth: function () {
+          netWorth: function () { // creamos un método que retorna el valor neto de la persona
             return this.assets - this.debt;
           }, // we can assign a function to an attribute, we create a method
         };
-        const intro = `Hi, mi name is ${
-          person.name
-          // put the () after netWorth to invoke the function
-        } and the color of my shirt is ${person.shirt} and my net worth is $${person.netWorth()}.`; 
+         // put the () after netWorth to invoke the function
+        const intro = `Hi, mi name is ${person.name}, my shirt is ${person.shirt} and my net worth is $${person.netWorth()}.`; 
         return intro;
       };
 
+ 
       console.log(introducer("Fredi", "blue"));
+      */
+
+      //for loop
+      //const fruits = ["Banana", "Apple", "Orange", "Pear"];
+
+      /* for(let i = 0 ; i <fruits.length; i++){
+        console.log(fruits[i]);
+      } */
+
+      //other loop
+      /* for (const fruit of fruits) {
+        console.log(fruit);
+      } */
+
+      // const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      // result = []; // create an array to hold the double of each number
+
+      /* for (number of numbers) {
+        console.log(number * 2);
+        result.push(number * 2);
+      }
+
+      console.log(result);
+      */
+
+      /*  
+      //make an arrow function that doubles an array
+      const double = (array) => { // we need to pass an array of numbers
+        let result = [];
+        for (const number of array) {
+          result.push(number * 2);
+        }
+        return result;
+      }
+      console.log(double([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+
+      //make an arrow function that squares an array
+      const square = (array) => {
+        let result = [];
+        for (const number of array) {
+          result.push(number ** 2);
+        }
+        return result;
+      }
+      console.log(square([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+      */
+
+      //functions that calculate the number of letters in an array
+
+      /* const howManyLetters = () => {
+        const frase = 'hey, can you go to grocery store with me?'
+        for (letter in frase){
+          console.log(letter + ' ' + frase[letter]); // letters act like an index
+        }
+      } */
+
+      /* const howManyLetters = () => {
+        const frase = "hey, can you go to grocery store with me?";
+        for (letter in frase) {
+          console.log(Number(letter) + 1); // as letter is an index we can start from 1 instead of 0
+        }
+      } */
+
+      /* const howManyLetters = (frase) => {
+        // if we want to pass an argument
+        //counter
+        let result = 0;
+
+        for (const index in frase) {
+          console.log(Number(index) + 1);
+          result = Number(index) + 1;
+        }
+        return { result }; // wrap result in an object
+      };
+      const frase = prompt('Write your frase: ')
+      console.log(howManyLetters(frase)); */
+
+      // create a function that add all the numbers in an array
+      /* const numbers1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      const numbers2 = [1, 2, 3];
+
+      const sumArray = (array) => {
+        let total = 0;
+        for (const number of array) {
+          total += number;
+        }
+        return {total};
+      };
+
+      console.log(sumArray(numbers1));
+      console.log(sumArray(numbers2)); */
+
+      //create a function that returns de biggest number inside an array
+      /* const numbers = [1, 20, 3, -46, 53, 69, 7, 8, 9, 10];
+      const max = (array) => {
+        let biggest = array[0];
+        for (const number of array) {
+          if (number > biggest) {
+            biggest = number;
+          }
+        }
+        return { biggest };
+      };
+      console.log(max(numbers)); */
+
+      // create a function that calculates letter frequency
+      const letterFrequency = (phrase) => {};
     </script>
   </body>
 </html>
