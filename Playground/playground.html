@@ -242,8 +242,79 @@
       };
       console.log(max(numbers)); */
 
-      // create a function that calculates letter frequency
-      const letterFrequency = (phrase) => {};
+      // create a function that calculates letter frequency using traditional Arrays
+      /* 
+      const letterFrequency = (phrase) => {
+        const arr = new Array(128).fill(0); // create an array of 128 numbers initialized to zero
+        for (let character of phrase) {
+          arr[character.charCodeAt(0)]++; // at the index of the ASCII code of the letter we add one
+        }
+        for (let i = 0; i < 128; i++) {
+          //print the letter and the occurence
+          if (arr[i] != 0) {
+            // if the value at the index is not 0 we have an occurence
+            console.log(
+              "Letter " +
+                String.fromCharCode(i) +
+                " appeared " +
+                arr[i] +
+                " times"
+            );
+          }
+        }
+        return null;
+      };
+
+      // letterFrequency("abcde abcde");
+      letterFrequency(
+        "Ut aliqua eu et nostrud sint qui Lorem nostrud consectetur consequat. Minim sit id dolore do nostrud qui amet ad."
+      ); 
+      */
+
+      // create a function that calculates letter frequency using objects
+      /* 
+      const letterFrequency = (phrase) => {
+        //console.log(phrase);
+        let frequency = {}; // use an object to save the frequency
+        for (const letter of phrase) {
+          // console.log(frequency);
+          //check if letter exist in frequency
+          if (letter in frequency) {
+            // increment the value in one
+            frequency[letter] += 1;
+          } else {
+            // otherwise set the value to 1
+            frequency[letter] = 1;
+          }
+        }
+        return frequency;
+      };
+
+      console.log(letterFrequency("Velit aliquip"));
+       */
+
+      // count the frequency of the words in a phrase
+      const wordFrequency = (phrase) => {
+        //console.log(phrase);
+        let frequency = {}; // use an object to save the frequency
+        words = phrase.split(" "); // we dont need to initialize words, we build the array on the fly.
+        console.log(words);
+        //check if word exist in frequency
+        for (const word of words) {
+          // console.log(word);
+          if (word in frequency) {
+            // increment the value in one
+            frequency[word] += 1;
+          } else {
+            // otherwise set the value to 1
+            frequency[word] = 1;
+          }
+        }
+        return frequency;
+      };
+
+      console.log(wordFrequency("hello world hello world here we are here"));
+     
     </script>
   </body>
 </html>
