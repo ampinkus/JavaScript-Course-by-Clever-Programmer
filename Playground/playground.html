@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=script, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="shortcut icon" href="#" />
   </head>
 
   <body>
@@ -79,7 +80,7 @@
 
       //arrow function
       // with implicit return
-      // let let nameFunction = (arguments) => Function definition
+      // let nameFunction = (arguments) => Function definition
       // let sumArrow = (a,b) => a + b;
       // console.log(sumArrow(5,10));
 
@@ -293,6 +294,7 @@
       console.log(letterFrequency("Velit aliquip"));
        */
 
+      /*
       // count the frequency of the words in a phrase
       const wordFrequency = (phrase) => {
         //console.log(phrase);
@@ -314,7 +316,103 @@
       };
 
       console.log(wordFrequency("hello world hello world here we are here"));
-     
+      */
+
+      //higher order functions:  map, filter, reduce
+      //map ver: https://www.freecodecamp.org/espanol/news/javascript-map-como-utilizar-la-funcion-js-map-metodo-de-arreglo/
+      // map loops trough all the array and returns an array with all the members after passing a transformation
+      /*
+      let result = [1, 2, 3, 4].map((number) => number * 2); // we double each number using map
+      console.log(result);
+
+      let modifiedArr = result.map(function (element, index) {
+        console.log(index); // the index of the array that we are traversing
+        console.log(element); // each element
+        return element * 3;
+      });
+      console.log(modifiedArr);
+
+    */
+
+      /* 
+    arrow function
+      with implicit return
+      let nameFunction = (arguments) => Function definition
+      let sumArrow = (a,b) => a + b;
+      console.log(sumArrow(5,10));
+
+      with explicit return
+      let nameFunction = (arguments) => { Function definition }
+      let tipArrow = (food,tip) => { //given a food amount and a tip calculate the total to pay
+          tipAmount = food * tip / 100;
+          total = food + tipAmount;
+          return total;
+      }
+      */
+
+      /*
+      let arr = [5, 6, 7, 8];
+      const doubleMap = (numbers) => {
+        // a function that returns the double of each number in the array
+        return numbers.map((number) => number * 2);
+      };
+      console.log(doubleMap(arr));
+
+      const modifiedArr = arr.map(function (element) {
+        return element * 3;
+      });
+      console.log(modifiedArr);
+
+      */
+
+      //filter ver https://www.w3schools.com/jsref/jsref_filter.asp
+      // create a filter that returns from an integer array an array with numbers greater than
+      // filter [1,2,3,4,5,6] => [4,5,6]  greater than 3
+
+      /* Using a standard function: 
+       const numbers = [1, 2, 3, 4, 5, 6];
+      const filter = (numbers, greaterThan) => {
+        let result = [];
+        for (const number of numbers) {
+          if (number > greaterThan) {
+            result.push(number);
+          }
+        }
+        return result;
+      };
+      console.log(filter(numbers, 2)); */
+
+      //  Examples filter an map:
+      //  The filter() method creates a shallow copy of a portion of a given array, filtered down to just the elements
+      //  from the given array that pass the test implemented by the provided function.
+      const numbers = [1, 2, 3, 4, 5, 6];
+      // returns only the members that comply with the condition number > 3
+      /* 
+          filter takes each element of the array numbers, put it in the variable number and checks 
+          if number > 3.  If its true it put number in an array called result
+      */
+      let result = numbers.filter((number) => number > 3);
+      console.log(result);
+      
+      // returns all the members of the array multiplied by 3
+      /* 
+          map takes each element of the array numbers, put it in the variable number and 
+          multiply it by 3. Then it put it in an rry called result
+      */
+      result = numbers.map((number) => number * 3);
+      console.log(result);
+
+      // example with array of objects
+      const actors = [
+        { name: "Johnny", netWorth: 200000 },
+        { name: "Amber", netWorth: 1000 },
+        { name: "Leonardo", netWorth: 300000 },
+      ];
+      /* filter takes each element of the array of objects, put each object in the variable actores and checks 
+          if actores.netWorth > 2000.  If its true it put the object stored in actores in an array of objects called result
+      */
+      result = actors.filter((actores) => actores.netWorth > 2000);
+      console.log(result);
     </script>
   </body>
 </html>
