@@ -14,62 +14,62 @@
       //don't use var
 
       /*
-                  let food = 0;
-                  let tipPercent = 0;
+                    let food = 0;
+                    let tipPercent = 0;
 
-                  food = Number(prompt('Price of the food?')); // the input is a string so we need to convert it to a number
-                  tipPercent = Number(prompt('Tip percent?'));
-                  tipAmount = food * tipPercent / 100;
-                  total = food + tipAmount;
-                  console.log('Tip Amount: ', tipAmount);
-                  console.log('Total: ', total);
-          */
+                    food = Number(prompt('Price of the food?')); // the input is a string so we need to convert it to a number
+                    tipPercent = Number(prompt('Tip percent?'));
+                    tipAmount = food * tipPercent / 100;
+                    total = food + tipAmount;
+                    console.log('Tip Amount: ', tipAmount);
+                    console.log('Total: ', total);
+            */
 
       /* math methods
-          console.log(Math.floor(1.25));
-          console.log(Math.ceil(1.25));
-          console.log(Math.floor(Math.random() * 3)); /* get a number between 0 and 2
+            console.log(Math.floor(1.25));
+            console.log(Math.ceil(1.25));
+            console.log(Math.floor(Math.random() * 3)); /* get a number between 0 and 2
 
-          */
+            */
 
       /*
-          Baby weather app
-          if conditional
-          if rain -> grab your umbrella
-          if sun -> grab your sunglasses
+            Baby weather app
+            if conditional
+            if rain -> grab your umbrella
+            if sun -> grab your sunglasses
 
-         let weather = 'sun'
-         if (weather == 'rain') {
-          console.log('Grab your umbrella')
-         }
-         else{
-          console.log('Grab your sunglasses')
-         }
-         */
+           let weather = 'sun'
+           if (weather == 'rain') {
+            console.log('Grab your umbrella')
+           }
+           else{
+            console.log('Grab your sunglasses')
+           }
+           */
 
       /* functions */
       /*  function callMyName(name){
-            console.log(name);
-           } */
+              console.log(name);
+             } */
 
       // callMyName('Fredi');
 
       /*
-          function greeting(name) { // takes a name and greets
-              console.log(`Hi ${name}, nice to met you!`); // ${string} is called string interpolation
-          }
-          greeting('Fredi');
+            function greeting(name) { // takes a name and greets
+                console.log(`Hi ${name}, nice to met you!`); // ${string} is called string interpolation
+            }
+            greeting('Fredi');
 
-          function isDivisor(number, divisor) { // tells if one number divides another
-              if (number % divisor == 0) {
-                  return 'Is divisor';
-              }
-              else {
-                  return 'Not divisor'
-              }
-          }
-          console.log(isDivisor(10, 2));
-          */
+            function isDivisor(number, divisor) { // tells if one number divides another
+                if (number % divisor == 0) {
+                    return 'Is divisor';
+                }
+                else {
+                    return 'Not divisor'
+                }
+            }
+            console.log(isDivisor(10, 2));
+            */
 
       // function tipCalculator(food,tip) { //given a food amount and a tip calculate the total to pay
       //     tipAmount = food * tip / 100;
@@ -122,296 +122,349 @@
       // console.log(person);
 
       /* const introducer = (name, shirt) => {
-        const person = { // creamos una clase person dentro de la función
-          name: name,
-          shirt: shirt,
-          assets: 100000,
-          debt: 50000,
-          netWorth: function () { // creamos un método que retorna el valor neto de la persona
-            return this.assets - this.debt;
-          }, // we can assign a function to an attribute, we create a method
+          const person = { // creamos una clase person dentro de la función
+            name: name,
+            shirt: shirt,
+            assets: 100000,
+            debt: 50000,
+            netWorth: function () { // creamos un método que retorna el valor neto de la persona
+              return this.assets - this.debt;
+            }, // we can assign a function to an attribute, we create a method
+          };
+           // put the () after netWorth to invoke the function
+          const intro = `Hi, mi name is ${person.name}, my shirt is ${person.shirt} and my net worth is $${person.netWorth()}.`;
+          return intro;
         };
-         // put the () after netWorth to invoke the function
-        const intro = `Hi, mi name is ${person.name}, my shirt is ${person.shirt} and my net worth is $${person.netWorth()}.`; 
-        return intro;
-      };
 
- 
-      console.log(introducer("Fredi", "blue"));
-      */
+
+        console.log(introducer("Fredi", "blue"));
+        */
 
       //for loop
       //const fruits = ["Banana", "Apple", "Orange", "Pear"];
 
       /* for(let i = 0 ; i <fruits.length; i++){
-        console.log(fruits[i]);
-      } */
+          console.log(fruits[i]);
+        } */
 
       //other loop
       /* for (const fruit of fruits) {
-        console.log(fruit);
-      } */
+          console.log(fruit);
+        } */
 
       // const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
       // result = []; // create an array to hold the double of each number
 
       /* for (number of numbers) {
-        console.log(number * 2);
-        result.push(number * 2);
-      }
-
-      console.log(result);
-      */
-
-      /*  
-      //make an arrow function that doubles an array
-      const double = (array) => { // we need to pass an array of numbers
-        let result = [];
-        for (const number of array) {
+          console.log(number * 2);
           result.push(number * 2);
         }
-        return result;
-      }
-      console.log(double([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
 
-      //make an arrow function that squares an array
-      const square = (array) => {
-        let result = [];
-        for (const number of array) {
-          result.push(number ** 2);
+        console.log(result);
+        */
+
+      /*
+        //make an arrow function that doubles an array
+        const double = (array) => { // we need to pass an array of numbers
+          let result = [];
+          for (const number of array) {
+            result.push(number * 2);
+          }
+          return result;
         }
-        return result;
-      }
-      console.log(square([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
-      */
+        console.log(double([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+
+        //make an arrow function that squares an array
+        const square = (array) => {
+          let result = [];
+          for (const number of array) {
+            result.push(number ** 2);
+          }
+          return result;
+        }
+        console.log(square([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+        */
 
       //functions that calculate the number of letters in an array
 
       /* const howManyLetters = () => {
-        const frase = 'hey, can you go to grocery store with me?'
-        for (letter in frase){
-          console.log(letter + ' ' + frase[letter]); // letters act like an index
-        }
-      } */
+          const frase = 'hey, can you go to grocery store with me?'
+          for (letter in frase){
+            console.log(letter + ' ' + frase[letter]); // letters act like an index
+          }
+        } */
 
       /* const howManyLetters = () => {
-        const frase = "hey, can you go to grocery store with me?";
-        for (letter in frase) {
-          console.log(Number(letter) + 1); // as letter is an index we can start from 1 instead of 0
-        }
-      } */
+          const frase = "hey, can you go to grocery store with me?";
+          for (letter in frase) {
+            console.log(Number(letter) + 1); // as letter is an index we can start from 1 instead of 0
+          }
+        } */
 
       /* const howManyLetters = (frase) => {
-        // if we want to pass an argument
-        //counter
-        let result = 0;
+          // if we want to pass an argument
+          //counter
+          let result = 0;
 
-        for (const index in frase) {
-          console.log(Number(index) + 1);
-          result = Number(index) + 1;
-        }
-        return { result }; // wrap result in an object
-      };
-      const frase = prompt('Write your frase: ')
-      console.log(howManyLetters(frase)); */
+          for (const index in frase) {
+            console.log(Number(index) + 1);
+            result = Number(index) + 1;
+          }
+          return { result }; // wrap result in an object
+        };
+        const frase = prompt('Write your frase: ')
+        console.log(howManyLetters(frase)); */
 
       // create a function that add all the numbers in an array
       /* const numbers1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-      const numbers2 = [1, 2, 3];
+        const numbers2 = [1, 2, 3];
 
-      const sumArray = (array) => {
-        let total = 0;
-        for (const number of array) {
-          total += number;
-        }
-        return {total};
-      };
+        const sumArray = (array) => {
+          let total = 0;
+          for (const number of array) {
+            total += number;
+          }
+          return {total};
+        };
 
-      console.log(sumArray(numbers1));
-      console.log(sumArray(numbers2)); */
+        console.log(sumArray(numbers1));
+        console.log(sumArray(numbers2)); */
 
       //create a function that returns de biggest number inside an array
       /* const numbers = [1, 20, 3, -46, 53, 69, 7, 8, 9, 10];
-      const max = (array) => {
-        let biggest = array[0];
-        for (const number of array) {
-          if (number > biggest) {
-            biggest = number;
+        const max = (array) => {
+          let biggest = array[0];
+          for (const number of array) {
+            if (number > biggest) {
+              biggest = number;
+            }
           }
-        }
-        return { biggest };
-      };
-      console.log(max(numbers)); */
+          return { biggest };
+        };
+        console.log(max(numbers)); */
 
       // create a function that calculates letter frequency using traditional Arrays
-      /* 
-      const letterFrequency = (phrase) => {
-        const arr = new Array(128).fill(0); // create an array of 128 numbers initialized to zero
-        for (let character of phrase) {
-          arr[character.charCodeAt(0)]++; // at the index of the ASCII code of the letter we add one
-        }
-        for (let i = 0; i < 128; i++) {
-          //print the letter and the occurence
-          if (arr[i] != 0) {
-            // if the value at the index is not 0 we have an occurence
-            console.log(
-              "Letter " +
-                String.fromCharCode(i) +
-                " appeared " +
-                arr[i] +
-                " times"
-            );
+      /*
+        const letterFrequency = (phrase) => {
+          const arr = new Array(128).fill(0); // create an array of 128 numbers initialized to zero
+          for (let character of phrase) {
+            arr[character.charCodeAt(0)]++; // at the index of the ASCII code of the letter we add one
           }
-        }
-        return null;
-      };
+          for (let i = 0; i < 128; i++) {
+            //print the letter and the occurence
+            if (arr[i] != 0) {
+              // if the value at the index is not 0 we have an occurence
+              console.log(
+                "Letter " +
+                  String.fromCharCode(i) +
+                  " appeared " +
+                  arr[i] +
+                  " times"
+              );
+            }
+          }
+          return null;
+        };
 
-      // letterFrequency("abcde abcde");
-      letterFrequency(
-        "Ut aliqua eu et nostrud sint qui Lorem nostrud consectetur consequat. Minim sit id dolore do nostrud qui amet ad."
-      ); 
-      */
+        // letterFrequency("abcde abcde");
+        letterFrequency(
+          "Ut aliqua eu et nostrud sint qui Lorem nostrud consectetur consequat. Minim sit id dolore do nostrud qui amet ad."
+        );
+        */
 
       // create a function that calculates letter frequency using objects
-      /* 
-      const letterFrequency = (phrase) => {
-        //console.log(phrase);
-        let frequency = {}; // use an object to save the frequency
-        for (const letter of phrase) {
-          // console.log(frequency);
-          //check if letter exist in frequency
-          if (letter in frequency) {
-            // increment the value in one
-            frequency[letter] += 1;
-          } else {
-            // otherwise set the value to 1
-            frequency[letter] = 1;
+      /*
+        const letterFrequency = (phrase) => {
+          //console.log(phrase);
+          let frequency = {}; // use an object to save the frequency
+          for (const letter of phrase) {
+            // console.log(frequency);
+            //check if letter exist in frequency
+            if (letter in frequency) {
+              // increment the value in one
+              frequency[letter] += 1;
+            } else {
+              // otherwise set the value to 1
+              frequency[letter] = 1;
+            }
           }
-        }
-        return frequency;
-      };
+          return frequency;
+        };
 
-      console.log(letterFrequency("Velit aliquip"));
-       */
+        console.log(letterFrequency("Velit aliquip"));
+         */
 
       /*
-      // count the frequency of the words in a phrase
-      const wordFrequency = (phrase) => {
-        //console.log(phrase);
-        let frequency = {}; // use an object to save the frequency
-        words = phrase.split(" "); // we dont need to initialize words, we build the array on the fly.
-        console.log(words);
-        //check if word exist in frequency
-        for (const word of words) {
-          // console.log(word);
-          if (word in frequency) {
-            // increment the value in one
-            frequency[word] += 1;
-          } else {
-            // otherwise set the value to 1
-            frequency[word] = 1;
+        // count the frequency of the words in a phrase
+        const wordFrequency = (phrase) => {
+          //console.log(phrase);
+          let frequency = {}; // use an object to save the frequency
+          words = phrase.split(" "); // we dont need to initialize words, we build the array on the fly.
+          console.log(words);
+          //check if word exist in frequency
+          for (const word of words) {
+            // console.log(word);
+            if (word in frequency) {
+              // increment the value in one
+              frequency[word] += 1;
+            } else {
+              // otherwise set the value to 1
+              frequency[word] = 1;
+            }
           }
-        }
-        return frequency;
-      };
+          return frequency;
+        };
 
-      console.log(wordFrequency("hello world hello world here we are here"));
-      */
+        console.log(wordFrequency("hello world hello world here we are here"));
+        */
 
       //higher order functions:  map, filter, reduce
       //map ver: https://www.freecodecamp.org/espanol/news/javascript-map-como-utilizar-la-funcion-js-map-metodo-de-arreglo/
       // map loops trough all the array and returns an array with all the members after passing a transformation
       /*
-      let result = [1, 2, 3, 4].map((number) => number * 2); // we double each number using map
-      console.log(result);
+        let result = [1, 2, 3, 4].map((number) => number * 2); // we double each number using map
+        console.log(result);
 
-      let modifiedArr = result.map(function (element, index) {
-        console.log(index); // the index of the array that we are traversing
-        console.log(element); // each element
-        return element * 3;
-      });
-      console.log(modifiedArr);
+        let modifiedArr = result.map(function (element, index) {
+          console.log(index); // the index of the array that we are traversing
+          console.log(element); // each element
+          return element * 3;
+        });
+        console.log(modifiedArr);
 
-    */
-
-      /* 
-    arrow function
-      with implicit return
-      let nameFunction = (arguments) => Function definition
-      let sumArrow = (a,b) => a + b;
-      console.log(sumArrow(5,10));
-
-      with explicit return
-      let nameFunction = (arguments) => { Function definition }
-      let tipArrow = (food,tip) => { //given a food amount and a tip calculate the total to pay
-          tipAmount = food * tip / 100;
-          total = food + tipAmount;
-          return total;
-      }
       */
 
       /*
-      let arr = [5, 6, 7, 8];
-      const doubleMap = (numbers) => {
-        // a function that returns the double of each number in the array
-        return numbers.map((number) => number * 2);
-      };
-      console.log(doubleMap(arr));
+      arrow function
+        with implicit return
+        let nameFunction = (arguments) => Function definition
+        let sumArrow = (a,b) => a + b;
+        console.log(sumArrow(5,10));
 
-      const modifiedArr = arr.map(function (element) {
-        return element * 3;
-      });
-      console.log(modifiedArr);
+        with explicit return
+        let nameFunction = (arguments) => { Function definition }
+        let tipArrow = (food,tip) => { //given a food amount and a tip calculate the total to pay
+            tipAmount = food * tip / 100;
+            total = food + tipAmount;
+            return total;
+        }
+        */
 
-      */
+      /*
+        let arr = [5, 6, 7, 8];
+        const doubleMap = (numbers) => {
+          // a function that returns the double of each number in the array
+          return numbers.map((number) => number * 2);
+        };
+        console.log(doubleMap(arr));
+
+        const modifiedArr = arr.map(function (element) {
+          return element * 3;
+        });
+        console.log(modifiedArr);
+
+        */
 
       //filter ver https://www.w3schools.com/jsref/jsref_filter.asp
       // create a filter that returns from an integer array an array with numbers greater than
       // filter [1,2,3,4,5,6] => [4,5,6]  greater than 3
 
-      /* Using a standard function: 
-       const numbers = [1, 2, 3, 4, 5, 6];
-      const filter = (numbers, greaterThan) => {
-        let result = [];
-        for (const number of numbers) {
-          if (number > greaterThan) {
-            result.push(number);
+      /* Using a standard function:
+         const numbers = [1, 2, 3, 4, 5, 6];
+        const filter = (numbers, greaterThan) => {
+          let result = [];
+          for (const number of numbers) {
+            if (number > greaterThan) {
+              result.push(number);
+            }
           }
-        }
-        return result;
-      };
-      console.log(filter(numbers, 2)); */
+          return result;
+        };
+        console.log(filter(numbers, 2)); */
 
-      //  Examples filter an map:
-      //  The filter() method creates a shallow copy of a portion of a given array, filtered down to just the elements
-      //  from the given array that pass the test implemented by the provided function.
-      const numbers = [1, 2, 3, 4, 5, 6];
-      // returns only the members that comply with the condition number > 3
+      // Examples filter and map:
+
+      // //  The filter() method creates a shallow copy of a portion of a given array, filtered down to just the elements
+      // //  from the given array that pass the test implemented by the provided function.
+      // const numbers = [1, 2, 3, 4, 5, 6];
+      // // returns only the members that comply with the condition number > 3
+      // /*
+      //     filter takes each element of the array numbers, put it in the variable number and checks
+      //     if number > 3.  If its true it put number in an array called result
+      // */
+      // let result = numbers.filter((number) => number > 3);
+      // console.log(result);
+
+      // // returns all the members of the array multiplied by 3
+      // /*
+      //     map takes each element of the array numbers, put it in the variable number and
+      //     multiply it by 3. Then it put it in an rry called result
+      // */
+      // result = numbers.map((number) => number * 3);
+      // console.log(result);
+
+      // // example with array of objects
+      // const actors = [
+      //   { name: "Johnny", netWorth: 200000 },
+      //   { name: "Amber", netWorth: 1000 },
+      //   { name: "Leonardo", netWorth: 300000 },
+      // ];
+      // /* filter takes each element of the array of objects, put each object in the variable actores and checks
+      //     if actores.netWorth > 2000.  If its true it put the object stored in actores in an array of objects called result
+      // */
+      // result = actors.filter((actores) => actores.netWorth > 2000);
+      // console.log(result);
+
+      // // join
+      // /*
+      //   The join() method creates and returns a new string by concatenating all of the elements in an array
+      //   (or an array-like object), separated by commas or a specified  separator string.
+      //   If the array has only one item, then that item will be returned without using the separator.
+      // */
+      // const elements = ["Fire", "Air", "Water"];
+      // console.log(elements.join());
+      // // expected output: "Fire,Air,Water"
+      // console.log(elements.join(""));
+      // // expected output: "FireAirWater"
+      // console.log(elements.join("-"));
+      // // expected output: "Fire-Air-Water"
+
+      // let names = actors.map(actores => actores.name).join(', ');
+      // console.log(names);
+      // */
+
+      // reduce
       /* 
-          filter takes each element of the array numbers, put it in the variable number and checks 
-          if number > 3.  If its true it put number in an array called result
-      */
-      let result = numbers.filter((number) => number > 3);
-      console.log(result);
-      
-      // returns all the members of the array multiplied by 3
-      /* 
-          map takes each element of the array numbers, put it in the variable number and 
-          multiply it by 3. Then it put it in an rry called result
-      */
-      result = numbers.map((number) => number * 3);
+      const array1 = [1, 2, 3, 4];
+      // 1 + 2 + 3 + 4:  this is what sumWithInitia will do
+      // with initial value
+      const initialValue = 0;
+      const sumWithInitial = array1.reduce(
+        (accumulator, currentValue) => accumulator + currentValue,
+        initialValue
+      );
+      console.log(sumWithInitial);
+
+      // other way without initial value
+      let result = array1.reduce(
+        (accumulator, currentValue) => accumulator + currentValue
+      );
       console.log(result);
 
-      // example with array of objects
+      // we can use any variable name
+      result = array1.reduce((a, b) => a + b);
+      console.log(result);
+      */
+     
+      // sum the netWorth of all the actors
       const actors = [
-        { name: "Johnny", netWorth: 200000 },
-        { name: "Amber", netWorth: 1000 },
-        { name: "Leonardo", netWorth: 300000 },
+        { name: "Johnny", netWorth: 200 },
+        { name: "Amber", netWorth: 100 },
+        { name: "Leonardo", netWorth: 300 },
       ];
-      /* filter takes each element of the array of objects, put each object in the variable actores and checks 
-          if actores.netWorth > 2000.  If its true it put the object stored in actores in an array of objects called result
-      */
-      result = actors.filter((actores) => actores.netWorth > 2000);
+      result = actors.reduce(
+        (a, b) => a + b.netWorth,0  // for the object we needed to add initial value of 0
+      );
       console.log(result);
     </script>
   </body>
