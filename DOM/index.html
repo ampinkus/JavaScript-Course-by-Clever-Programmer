@@ -6,10 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>replit</title>
     <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="shortcut icon" href="#" />
   </head>
   <body>
-    <h2> Hello World</h2>
-   
+
+    <!-- we put an id to manipulate the title from the script file -->
+    <div id="title" style="color: blue"><h2>Start!</h2></div>
+
+    <!-- We create 3 squares and when we click on it we get on console which one we clicked on  -->
+    <!-- Also on a text below each square -->
+    <div class="container">
+      <button class="square" id="red" value="red"></button>
+      <button class="square" id="yellow" value="yellow"></button>
+      <button class="square" id="green" value="green"></button>
+    </div>
+    <!-- here we will put the text below the blocks -->
+    <h2 id="blockText"></h2> 
+    <button id="clear-game">Reset</button>
+
     <script src="script.js"></script>
   </body>
 </html>
