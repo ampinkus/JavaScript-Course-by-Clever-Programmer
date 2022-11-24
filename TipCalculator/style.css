@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+body {
+  background-color: blueviolet;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+}
+
+.titulo {
+  color: antiquewhite;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box div {
+  width: 350px;
+  height: 600px;
+  background-color: rgb(11, 4, 41);
+  border-radius: 5%;
+
+}
