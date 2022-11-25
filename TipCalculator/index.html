@@ -13,9 +13,10 @@
     <div class="box">
       <div class="calculadora">
         <h3 class="texto-interno">Total cuenta</h3>
+        <!--  onkeyup="calculaCuenta()" actualiza el valor del campo cada vez que presiono una tecla  -->
         <input
           id="total-cuenta"
-          onkeyup="calculaCuenta()"
+          onkeyup="calculaCuenta()"  
           type="text"
           class="input"
           name="totalCuenta"
@@ -25,6 +26,7 @@
         <h3 class="texto-interno">Propina %</h3>
         <input
           id="propina"
+          onkeyup="calculaCuenta()" 
           type="number"
           class="input"
           name="propina"

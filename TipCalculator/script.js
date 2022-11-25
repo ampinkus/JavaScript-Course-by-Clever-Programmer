@@ -1,14 +1,38 @@
 // defino las variables
-let totalCuenta = 0; // monto a pagar
+let montoPagar = 0; // monto a pagar
 let propina = 0; // cual es el % de la propina
 let numeroComensales = 1; // cuantos comensales son
 let costoComensal = 0; //cuanto paga cada comensal
 
-totalCuenta = document.querySelector('#total-cuenta');
+ // # indica que estoy buscando por id
+let totalCuenta = document.querySelector('#total-cuenta');
+let totalPropina = document.querySelector('#propina');
 
-calculaCuenta = () => {
-console.log(Number(totalCuenta.value));
+// cada vez que ingreso un valor se activa esta función y obtengo el numero que ingrese
+calculaCuenta = () => { 
+// console.log(Number(totalCuenta.value));
+console.log(montoPagar);
+console.log(propina);
 } 
+
+// Si quiero obtener el valor ingresado cuando presiono Enter en vez de cuando presiono digito a digito
+var input = document.getElementById("total-cuenta"); 
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") { 
+    event.preventDefault();
+    montoPagar = (Number(totalCuenta.value));
+  }
+});
+
+var input = document.getElementById("propina"); 
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") { 
+    event.preventDefault();
+    propina = (Number(totalPropina.value));
+  }
+});
+
+
 
 
 masComensales = () => {
