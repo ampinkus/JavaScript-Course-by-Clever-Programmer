@@ -74,9 +74,12 @@ body {
   }
 
 #numero-comensales{
-    color: white;
+    color:white;
+    text-align: center;
+    font-weight: 400;
+    font-size: larger;
     height: 30px;
     width: 30px;
-    background-color: rgb(11, 4, 41);
+    background-color: rgb(11, 4, 41); 
     border: 0px;
 }
