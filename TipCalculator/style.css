@@ -1,12 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
 body {
+  /* formateo el cuerpo de la página*/
   background-color: blueviolet;
   font-family: "Poppins", sans-serif;
   line-height: 1.5;
 }
 
 .titulo {
+  /*formateo el titulo*/
   color: antiquewhite;
   font-size: 32px;
   text-align: center;
@@ -14,15 +16,67 @@ body {
 }
 
 .box {
-  display: flex;
+  display: flex; /* create a container */
+  flex-direction: column; /* the elements inside the container are column aligned */
   align-items: center;
   justify-content: center;
 }
 
-.box div {
-  width: 350px;
+.box .calculadora {
+  /* formateo el aspecto de la calculadora*/
+  width: 450px;
   height: 600px;
   background-color: rgb(11, 4, 41);
-  border-radius: 5%;
+  border-radius: 2%;
+  border-color: rgb(77, 11, 11);
+  border-width: 2px;
+  border-style: solid;
+}
 
+.texto-interno {
+  /* formateo el texto en la calculadora*/
+  color: antiquewhite;
+  margin: 30px 10px 0px 10px;
+  font-weight: 100;
+}
+
+.input {
+  /* Los campos para ingresar los numeros*/
+  color: white;
+  margin: 10px 10px 0px 10px;
+  padding-left: 15px;
+  border: 0px;
+  border-radius: 30px;
+  background-color: darkslateblue;
+  height: 30px;
+  width: 300px;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ cambia las caracteristicas de los placeholders*/
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+.boton{ /* formato dle boton */
+    margin: 10px 5px 10px 5px;
+    background-color:darkcyan;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    font-weight: 400;
+    font-size: larger;
+}
+
+.boton:hover { /* cuando muevo el raton arriba del boton*/ 
+    background-color: #4CAF50; /* Green */
+    color: white;
+  }
+
+#numero-comensales{
+    color: white;
+    height: 30px;
+    width: 30px;
+    background-color: rgb(11, 4, 41);
+    border: 0px;
 }

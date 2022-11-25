@@ -11,7 +11,48 @@
   <body style="background-color: darkslateblue">
     <div class="titulo">Calculadora de Propinas</div>
     <div class="box">
-      <div></div>
+      <div class="calculadora">
+        <h3 class="texto-interno">Total cuenta</h3>
+        <input
+          id="total-cuenta"
+          onkeyup="calculaCuenta()"
+          type="text"
+          class="input"
+          name="totalCuenta"
+          placeholder="$"
+          min="0"
+        />
+        <h3 class="texto-interno">Propina %</h3>
+        <input
+          id="propina"
+          type="number"
+          class="input"
+          name="propina"
+          placeholder="%"
+          min="0"
+          max="100"
+        />
+        <h3 class="texto-interno">Comensales></h3>
+        <button
+          type="button"
+          id="masComensales"
+          onclick="masComensales()"
+          class="boton"
+        >
+          +
+        </button>
+        <input type="text" id="numero-comensales" />
+        <button
+          type="button"
+          id="menosComensales"
+          onclick="menosComensales()"
+          class="boton"
+        >
+          -
+        </button>
+        <h3 class="texto-interno" id="precio-comensal">Cada comensal $</h3>
+        <input type="number" class="input" name="propina" placeholder="$" />
+      </div>
     </div>
 
     <script src="script.js"></script>
