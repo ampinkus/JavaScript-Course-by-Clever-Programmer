@@ -11,13 +11,16 @@
 
   <body style="background-color: darkslateblue">
     <div class="titulo">Calculadora de Propinas</div>
+    <div class="sub-titulo" id="texto-inicial"></div>
+    <body onload= "message()"></body>
+    <p></p>
     <div class="box">
       <div class="calculadora">
         <h3 class="texto-interno">Total cuenta</h3>
         <!--  onkeyup="calculaCuenta()" actualiza el valor del campo cada vez que presiono una tecla  -->
         <input
           id="total-cuenta"
-          onkeyup="calculaCuenta()"  
+          onkeyup="calculaCuenta()"
           type="text"
           class="input"
           name="totalCuenta"
@@ -27,7 +30,7 @@
         <h3 class="texto-interno">Propina %</h3>
         <input
           id="propina"
-          onkeyup="calculaCuenta()" 
+          onkeyup="calculaCuenta()"
           type="number"
           class="input"
           name="propina"
@@ -53,8 +56,14 @@
         >
           -
         </button>
-        <h3 class="texto-interno" id="precio-comensal">Cada comensal $</h3>
-        <input type="text" class="input" name="propina" placeholder="$" />
+        <h3 class="texto-interno">Cada comensal $</h3>
+        <input
+          type="text"
+          class="input"
+          name="propina"
+          id="precio-comensal"
+          placeholder="$"
+        />
       </div>
     </div>
 

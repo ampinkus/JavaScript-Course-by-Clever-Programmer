@@ -1,8 +1,9 @@
 // Variables para ingresar los datos de los campos, # indica que estoy buscando por id
-let campoTotalCuenta = document.querySelector('#total-cuenta'); // El total de la consumición
-let campoTotalPropina = document.querySelector('#propina'); // cual es el % de la propina
-let campoNumeroComensales = document.querySelector('#numero-comensales'); // cuantos comensales son
-let campoTotalCadaComensal = document.querySelector('#precio-comensal'); //cuanto paga cada comensal
+let campoTotalCuenta = document.querySelector("#total-cuenta"); // Campo del total de la consumición
+let campoTotalPropina = document.querySelector("#propina"); // Campo cual es el % de la propina
+let campoNumeroComensales = document.querySelector("#numero-comensales"); // Campo cuantos comensales son
+let campoTotalCadaComensal = document.querySelector("#precio-comensal"); //Campo cuanto paga cada comensal
+let textoInicial =  document.querySelector("#texto-inicial");
 
 // Variables para guardar los valores numéricos de los campos
 let totalCuenta = 0; // El total de la consumición
@@ -10,50 +11,51 @@ let totalPropina = 0; // cual es el % de la propina
 let numeroComensales = 1; // cuantos comensales son
 let totalCadaComensal = 0; //cuanto paga cada comensal
 
-// cada vez que ingreso un valor se activa esta función y obtengo el numero que ingrese
-calculaCuenta = () => { 
-console.log(montoPagar);
-console.log(propina);
-cadaComensal = totalCuenta*( 1 + totalPropina/100) / totalComensales;
-console.log(cadaComensal);
-// cadaComensal.setAttribute('value', propina); // envío el valor de los comensales
-} 
+// calculo el total para cada comensal y lo presento en el campo de cada comensal
+calculaCuenta = () => {
+  totalCadaComensal =
+    (totalCuenta * (1 + totalPropina / 100)) / numeroComensales;
+  console.log(totalCadaComensal);
+  campoTotalCadaComensal.setAttribute("value", totalCadaComensal.toFixed(2)); // envío el costo para cada comensal
+};
 
-// Si quiero obtener el valor ingresado cuando presiono Enter en vez de cuando presiono digito a digito
-var input = document.getElementById("total-cuenta"); 
-input.addEventListener("keypress", function(event) {
-  if (event.key === "Enter") { 
+//obtengo el valor ingresado en los campos "Total Cuenta" y "Propina" cuando presiono Enter
+var input = document.getElementById("total-cuenta");
+input.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
     event.preventDefault();
-    montoPagar = (Number(campoTotalCuenta.value));
+    totalCuenta = Number(campoTotalCuenta.value);
   }
   calculaCuenta();
 });
 
-var input = document.getElementById("propina"); 
-input.addEventListener("keypress", function(event) {
-  if (event.key === "Enter") { 
+var input = document.getElementById("propina");
+input.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
     event.preventDefault();
-    propina = (Number(totalPropina.value));
+    totalPropina = Number(campoTotalPropina.value);
   }
   calculaCuenta();
 });
 
+// agrego un comensal mas y vuelvo a calcular la cuenta
 masComensales = () => {
-    numeroComensales++;
-    console.log(numeroComensales);
-    totalComensales.setAttribute('value', numeroComensales); // envío el valor de los comensales
-    calculaCuenta(); 
-}
+  numeroComensales++;
+  campoNumeroComensales.setAttribute("value", numeroComensales); // envío el valor de los comensales
+  calculaCuenta();
+};
 
+// elimino un comensal y vuelvo a calcular la cuenta
 menosComensales = () => {
-    numeroComensales--;
-    if(numeroComensales <= 1){
-        numeroComensales = 1;
-    }
-    console.log(numeroComensales);
-    totalComensales.setAttribute('value', numeroComensales); // envío el valor de los comensales
-    calculaCuenta();
-}
+  numeroComensales--;
+  if (numeroComensales <= 1) {
+    numeroComensales = 1;
+  }
+  campoNumeroComensales.setAttribute("value", numeroComensales); // envío el valor de los comensales
+  calculaCuenta();
+};
 
-
-
+message = () => {
+  textoInicial.innerHTML =
+    'Ingrese el Total de la Cuenta y el % de Propina <br> presione ENTER luego de cada ingreso.<br>Con los botones elija el número de comensales.<br>El total a pagar se ve en el campo "Cada Comensal $"'
+};
