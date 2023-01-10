@@ -15,8 +15,8 @@ let totalCadaComensal = 0; //cuanto paga cada comensal
 calculaCuenta = () => {
   totalCadaComensal =
     (totalCuenta * (1 + totalPropina / 100)) / numeroComensales;
-  console.log(totalCadaComensal);
-  campoTotalCadaComensal.setAttribute("value", totalCadaComensal.toFixed(2)); // envío el costo para cada comensal
+  // envío el costo para cada comensal con value indico que el atributo que modifico es el valor del campo
+  campoTotalCadaComensal.setAttribute("value", totalCadaComensal.toFixed(2)); 
 };
 
 //obtengo el valor ingresado en los campos "Total Cuenta" y "Propina" cuando presiono Enter
@@ -55,7 +55,8 @@ menosComensales = () => {
   calculaCuenta();
 };
 
-message = () => {
+// inserto el mensaje en el campo texto-inicial del HTML
+message = () => { 
   textoInicial.innerHTML =
     'Ingrese el Total de la Cuenta y el % de Propina <br> presione ENTER luego de cada ingreso.<br>Con los botones elija el número de comensales.<br>El total a pagar se ve en el campo "Cada Comensal $"'
 };

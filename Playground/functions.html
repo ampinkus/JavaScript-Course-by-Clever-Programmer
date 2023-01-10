@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="shortcut icon" href="#" />
+  </head>
+
+  <body>
+    <script>
+      /* functions */
+      function callMyName(name) {
+        console.log(name);
+      }
+
+      callMyName("Fredi");
+
+      function greeting(name) {
+        // takes a name and greets
+        console.log(`Hi ${name}, nice to met you!`); // ${string} is called string interpolation
+      }
+      greeting("Fredi");
+
+      function isDivisor(number, divisor) {
+        // tells if one number divides another
+        if (number % divisor == 0) {
+          return "Is divisor";
+        } else {
+          return "Not divisor";
+        }
+      }
+      console.log(isDivisor(10, 2));
+
+      function tipCalculator(food, tip) {
+        //given a food amount and a tip calculate the total to pay
+        tipAmount = (food * tip) / 100;
+        total = food + tipAmount;
+        return total;
+      }
+      console.log("Total to pay: " + tipCalculator(100, 10));
+
+      //arrow function with implicit return
+      // let nameFunction = (arguments)  => Function definition
+      let sumArrow = (a, b) => a + b;
+      console.log(sumArrow(5, 10));
+
+      // with explicit return
+      // let nameFunction = (arguments) => { Function definition }
+      let tipArrow = (food, tip) => {
+        //given a food amount and a tip calculate the total to pay
+        tipAmount = (food * tip) / 100;
+        total = food + tipAmount;
+        return total;
+      };
+
+      console.log(tipArrow(100, 10));
+    </script>
+  </body>
+</html>

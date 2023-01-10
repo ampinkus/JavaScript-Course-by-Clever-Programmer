@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="shortcut icon" href="#" />
+  </head>
+
+  <body>
+    <script>
+      //var, let, const
+      //don't use var
+
+      let food = 0;
+      let tipPercent = 0;
+
+      food = Number(prompt("Price of the food?")); // the input is a string so we need to convert it to a number
+      tipPercent = Number(prompt("Tip percent?"));
+      tipAmount = (food * tipPercent) / 100;
+      total = food + tipAmount;
+      console.log("Tip Amount: ", tipAmount);
+      console.log("Total: ", total);
+
+      //math methods
+      console.log(Math.floor(1.25));
+      console.log(Math.ceil(1.25));
+      console.log(Math.floor(Math.random() * 10)); // get a number between 0 and 9
+
+      //Baby weather app
+      //if conditional
+      //if rain -> grab your umbrella
+      //if sun -> grab your sunglasses
+
+      let weather = "sun";
+      if (weather == "rain") {
+        console.log("Grab your umbrella");
+      } else {
+        console.log("Grab your sunglasses");
+      }
+    </script>
+  </body>
+</html>

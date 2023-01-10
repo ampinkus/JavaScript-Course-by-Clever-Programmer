@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="shortcut icon" href="#" />
+  </head>
+
+  <body>
+    <script>
+      //for loop
+      const fruits = ["Banana", "Apple", "Orange", "Pear"];
+
+      for (let i = 0; i < fruits.length; i++) {
+        console.log(fruits[i]);
+      }
+
+      //other loop
+      for (const fruit of fruits) {
+        console.log(fruit);
+      }
+
+      const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      result = []; // create an array to hold the double of each number
+
+      for (number of numbers) {
+        console.log(number * 2);
+        result.push(number * 2);
+      }
+
+      console.log(result);
+
+      //make an arrow function that doubles an array
+      const double = (array) => {
+        // we need to pass an array of numbers
+        let result = [];
+        for (const number of array) {
+          result.push(number * 2);
+        }
+        return result;
+      };
+      console.log(double([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+
+      //make an arrow function that squares an array
+      const square = (array) => {
+        let result = [];
+        for (const number of array) {
+          result.push(number ** 2);
+        }
+        return result;
+      };
+      console.log(square([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+
+      //functions that calculate the number of letters in an array
+
+      const howManyLetters = () => {
+        const frase = "hey, can you go to grocery store with me?";
+        for (letter in frase) {
+          console.log(letter + " " + frase[letter]); // letters act like an index
+        }
+      };
+
+      const howManyLetters01 = () => {
+        const frase = "hey, can you go to grocery store with me?";
+        for (letter in frase) {
+          console.log(Number(letter) + 1); // as letter is an index we can start from 1 instead of 0
+        }
+      };
+
+      const howManyLetters02 = (frase) => {
+        // if we want to pass an argument
+        //counter
+        let result = 0;
+
+        for (const index in frase) {
+          console.log(Number(index) + 1);
+          result = Number(index) + 1;
+        }
+        return { result }; // wrap result in an object
+      };
+      const frase = prompt("Write your frase: ");
+      console.log(howManyLetters(frase));
+
+      // create a function that add all the numbers in an array
+      const numbers1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      const numbers2 = [1, 2, 3];
+
+      const sumArray = (array) => {
+        let total = 0;
+        for (const number of array) {
+          total += number;
+        }
+        return { total };
+      };
+
+      console.log(sumArray(numbers1));
+      console.log(sumArray(numbers2));
+
+      //create a function that returns de biggest number inside an array
+      const numbers3 = [1, 20, 3, -46, 53, 69, 7, 8, 9, 10];
+      const max = (array) => {
+        let biggest = array[0];
+        for (const number of array) {
+          if (number > biggest) {
+            biggest = number;
+          }
+        }
+        return { biggest };
+      };
+      console.log(max(numbers3));
+
+      // create a function that calculates letter frequency using traditional Arrays
+
+      const letterFrequency = (phrase) => {
+        const arr = new Array(128).fill(0); // create an array of 128 numbers initialized to zero
+        for (let character of phrase) {
+          arr[character.charCodeAt(0)]++; // at the index of the ASCII code of the letter we add one
+        }
+        for (let i = 0; i < 128; i++) {
+          //print the letter and the occurence
+          if (arr[i] != 0) {
+            // if the value at the index is not 0 we have an occurence
+            console.log(
+              "Letter " +
+                String.fromCharCode(i) +
+                " appeared " +
+                arr[i] +
+                " times"
+            );
+          }
+        }
+        return null;
+      };
+
+      letterFrequency("abcde abcde");
+      letterFrequency(
+        "Ut aliqua eu et nostrud sint qui Lorem nostrud consectetur consequat. Minim sit id dolore do nostrud qui amet ad."
+      );
+
+      // create a function that calculates letter frequency using objects
+
+      const letterFrequency01 = (phrase) => {
+        //console.log(phrase);
+        let frequency = {}; // use an object to save the frequency
+        for (const letter of phrase) {
+          // console.log(frequency);
+          //check if letter exist in frequency
+          if (letter in frequency) {
+            // increment the value in one
+            frequency[letter] += 1;
+          } else {
+            // otherwise set the value to 1
+            frequency[letter] = 1;
+          }
+        }
+        return frequency;
+      };
+
+      console.log(letterFrequency01("Velit aliquip"));
+
+      // count the frequency of the words in a phrase
+      const wordFrequency = (phrase) => {
+        //console.log(phrase);
+        let frequency = {}; // use an object to save the frequency
+        words = phrase.split(" "); // we dont need to initialize words, we build the array on the fly.
+        console.log(words);
+        //check if word exist in frequency
+        for (const word of words) {
+          // console.log(word);
+          if (word in frequency) {
+            // increment the value in one
+            frequency[word] += 1;
+          } else {
+            // otherwise set the value to 1
+            frequency[word] = 1;
+          }
+        }
+        return frequency;
+      };
+
+      console.log(wordFrequency("hello world hello world here we are here"));
+    </script>
+  </body>
+</html>

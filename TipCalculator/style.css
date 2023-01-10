@@ -59,13 +59,13 @@ body {
   width: 300px;
 }
 
-::placeholder {
+::placeholder { /* Para cambiar el color de los textos de los placeholders a blanco*/
   /* Chrome, Firefox, Opera, Safari 10.1+ cambia las caracteristicas de los placeholders*/
   color: white;
   opacity: 1; /* Firefox */
-}
+} 
 
-.boton{ /* formato dle boton */
+.boton{ /* formato del boton */
     margin: 10px 5px 10px 5px;
     background-color:darkcyan;
     height: 40px;
@@ -80,7 +80,7 @@ body {
     color: white;
   }
 
-#numero-comensales{
+#numero-comensales{ /* formato del texto del numero de comensales */
     color:white;
     text-align: center;
     font-weight: 400;

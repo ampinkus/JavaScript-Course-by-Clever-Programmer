@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="shortcut icon" href="#" />
+  </head>
+
+  <body>
+    <script>
+      // Objects
+      // key : value pair
+      const person = {
+        name: "Leonardo",
+        shirt: "white",
+      };
+
+      console.log(person);
+      console.log(person.name);
+      console.log(person.shirt);
+
+      //assign attribute
+      person.phone = "6560035";
+      console.log(person);
+
+      const introducer = (name, shirt) => {
+        const person = {
+          // creamos una clase person dentro de la función
+          name: name,
+          shirt: shirt,
+          assets: 100000,
+          debt: 50000,
+          netWorth: function () {
+            // creamos un método que retorna el valor neto de la persona
+            return this.assets - this.debt;
+          }, // we can assign a function to an attribute, we create a method
+        };
+        // put the () after netWorth to invoke the function
+        const intro = `Hi, mi name is ${person.name}, my shirt is ${
+          person.shirt
+        } and my net worth is $${person.netWorth()}.`;
+        return intro;
+      };
+
+      console.log(introducer("Fredi", "blue"));
+    </script>
+  </body>
+</html>
