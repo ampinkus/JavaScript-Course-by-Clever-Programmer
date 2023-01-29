@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="shortcut icon" href="#" />
+  </head>
+
+  <body>
+    <script>
+      // it is possible to initialize an object with a group of properties
+      // all the properties are public, not like Java where we have private properties and public getter and setters
+      let myObject = {
+        saludo: "Hello",
+        age: 45,
+        isAdult: true,
+      };
+      console.log(myObject);
+      console.log(myObject.isAdult); // dot notation
+      console.log(myObject["isAdult"]); //bracket notation, note the ""
+
+      myObject = {
+        // we re defined the object without one of his properties.
+        saludo: "Hello",
+        age: 45,
+      };
+      console.log(myObject);
+      console.log(myObject.isAdult); // is undefined because I deleted this property from the object
+
+      // when to use object [] notation:  When the property name is a reserved word
+      myObject = {
+        saludo: "Hello",
+        age: 45,
+        isAdult: true,
+        1: "El primero",
+      };
+      console.log(myObject);
+      // this wont work  console.log(myObject.1)
+      console.log(myObject["1"]); // Using brackets it will Worker
+
+      // when the property is dynamic
+      let propertyName = "age"; // property name holds the content of the attribute age
+      // wont work give undefined  console.log(myObject.propertyName);
+      console.log(myObject[propertyName]);
+    </script>
+  </body>
+</html>

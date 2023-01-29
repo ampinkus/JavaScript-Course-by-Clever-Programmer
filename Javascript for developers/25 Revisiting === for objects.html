@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="shortcut icon" href="#" />
+  </head>
+
+  <body>
+    <script>
+      let myObject = {
+        saludo: "Hello",
+        age: 45,
+        isAdult: true,
+        objProperty: {
+          innerProp: "Inner Property",
+        },
+      };
+
+      let myObject2 = myObject;
+      // if you have two objects and you want to compare them the interpreter checks
+      // if they are pointing to the same position in memory
+      if (myObject2 == myObject) {
+        console.log("They are equal");
+      }
+
+      if (myObject2 === myObject) {
+        console.log("They are equal");
+      }
+
+      myObject2.age = 47;
+      console.log(myObject2);
+      console.log(myObject);
+    </script>
+  </body>
+</html>

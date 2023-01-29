@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="shortcut icon" href="#" />
+  </head>
+
+  <body>
+    <script>
+      /*
+        Javascript is object oriented but NOT class oriented language
+        */
+      let myObject = {}; // I create an object without creating a class
+      console.log(typeof myObject);
+      console.log(myObject);
+
+      // add a property to the object, object in Javascript are not like a template (like in java) but more like a "Map"
+      // we can add at runtime properties to an object
+      myObject.saludo = "Hello";
+      console.log(myObject); // the object
+      console.log(myObject.saludo); // the property of the object
+
+      myObject.age = 45;
+      console.log(myObject); // the object
+      console.log(myObject.age); // the property of the object
+    </script>
+  </body>
+</html>

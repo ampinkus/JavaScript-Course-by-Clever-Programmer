@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="shortcut icon" href="#" />
+  </head>
+
+  <body>
+    <script>
+      let arreglo = [100, 200, 300];
+      console.log(arreglo);
+      console.log(arreglo[0]);
+      console.log(arreglo[7]);
+
+      let arreglo2 = [];
+      console.log(arreglo2);
+      console.log(arreglo2[0]);
+
+      arreglo2 = arreglo;
+      console.log(arreglo2);
+      console.log(arreglo2[0]);
+
+      arreglo2[10] = 10; // puedo agregar valores sin definir el tamaño del arreglo de antemano
+      console.log(arreglo2);
+    </script>
+  </body>
+</html>
